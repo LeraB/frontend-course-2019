@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="body">
+<h1>Адаптивні картинки picture, srcset</h1>
+<!-- Retina  -->
+ <h2>Ретина</h2>
+<img
+  class="reaponsive-image"
+  src="images/cat.jpeg"
+  srcset="images/golden_puppy@2x.png 2x, images/golden_puppy@3x.png 3x"
+  alt="Dog"
+/>
+
+<!-- Адаптивність -->
+
+<h2>Адаптивність</h2>
+<img
+  src="images/cat.jpeg"
+  srcset="
+    images/cat_w_200.jpg  200w,
+    images/cat_w_459.jpg  459w,
+    images/cat_w_720.jpg 720w
+  "
+/>
+
+<!-- Формат -->
+
+<h2>Формат</h2>
+<picture>
+  <source srcset="images/cat.webp" type="image/webp" />
+  <img class="responsive-image" src="images/cat.jpeg" alt="Dog" />
+</picture>
+
+<!-- Кадрування -->
+
+<h2>Кадрування</h2>
+<picture>
+    <source
+        media="(max-width: 700px)"
+        srcset="images/cat_w_459.jpg"
+    />
+    <source
+        media="(max-width: 1024px)"
+        srcset="images/cat_w_720.jpg"
+    />
+    <img
+        class="responsive-image"
+        src="images/cat.jpeg"
+        alt="dog"
+    />
+</picture>
+</body>
+</html>

@@ -1,0 +1,14 @@
+body {
+  text-align: center;
+}
+
+.responsive-image {
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+}
+
+.response-height {
+  max-height: 800px;
+  max-width: 100%;
+}
